@@ -2,4 +2,3 @@
 /node_modules/
 /public/app.php
 /dist
-composer.lock
