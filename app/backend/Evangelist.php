@@ -25,7 +25,8 @@ class Evangelist
       'html_url',
       'avatar_url',
       'company',
-      'location'
+      'location',
+      'login'
     ];
 
 		foreach ($allowed as $allow) {
