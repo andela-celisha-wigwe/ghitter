@@ -19,8 +19,17 @@ class Evangelist
 		$data = $client->request('GET', "https://api.github.com/users/$username?client_id=" . getenv("CLIENT_ID") . "&client_secret=" . getenv("CLIENT_SECRET"))->getBody();
 
 		$data = json_decode($data, true);
-		foreach ($data as $property => $value) {
-			$this->{$property} = $value;
+    $allowed = [
+      'name',
+      'email',
+      'html_url',
+      'avatar_url',
+      'company',
+      'location'
+    ];
+
+		foreach ($allowed as $allow) {
+			$this->{$allow} = $data[$allow];
 		}
 	}
 
