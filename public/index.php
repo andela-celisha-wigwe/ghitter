@@ -34,12 +34,11 @@ $roy = new Evangelist('andela-celisha-wigwe');
 	              <h3 class="masthead-brand"><i>elchroy</i></h3>
 	              <nav>
 	                <ul class="nav masthead-nav">
-	                	<li class="active"><a href="#">My small GitHub.com page</a></li>
+	                	<li class="active"><a href="#">My small Social page</a></li>
 	                </ul>
 	              </nav>
 	            </div>
 	          </div>
-
 	          <div class="inner cover" id="profile">
 	          	<div id="avatar">
 	          		<img src="<?php echo $roy->avatar_url ?>" className="img img-responsive center-block" />
@@ -59,6 +58,14 @@ $roy = new Evangelist('andela-celisha-wigwe');
 	          	<div id="location">
 	          		<h4 class="cover-heading"><?php echo $roy->location ?></h4>
 	          	</div>
+	          </div>
+
+	          <div class="" id="fb_posts" style="padding: 0 60px;text-align: left;font-weight: lighter;font-size: small;text-shadow: none;margin-bottom: 90px;">
+	          	<?php foreach ($roy->fb_posts as $post): ?>
+		          	<p id="<?php echo $post->message ?>">
+		          		<span class="cover-heading"><?php echo $post->message ?></span>
+		          	</p>
+	          	<?php endforeach; ?>
 	          </div>
 
 	          <div class="mastfoot">
